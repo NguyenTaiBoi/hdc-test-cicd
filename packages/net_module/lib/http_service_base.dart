@@ -97,15 +97,15 @@ abstract class HttpServiceBase extends DisposableObject {
   ///
   /// [HttpServiceBase] will enqueue the incoming request tasks instead
   /// send them directly when [interceptor.requestOptions] is locked.
-  void lock() => dioInstance.lock();
-
-  /// Unlock the current [HttpServiceBase] instance.
-  ///
-  /// [HttpServiceBase] instance dequeue the request task。
-  void unlock() => dioInstance.unlock();
-
-  /// Clear the current [HttpServiceBase] instance waiting queue.
-  void clear() => dioInstance.clear();
+  // void lock() => dioInstance.lock();
+  //
+  // /// Unlock the current [HttpServiceBase] instance.
+  // ///
+  // /// [HttpServiceBase] instance dequeue the request task。
+  // void unlock() => dioInstance.options.;
+  //
+  // /// Clear the current [HttpServiceBase] instance waiting queue.
+  // void clear() => dioInstance.clear();
 
   /// Shuts down the [HttpServiceBase].
   ///
