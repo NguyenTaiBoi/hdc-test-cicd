@@ -22,5 +22,6 @@ jobs:
         with:
           channel: "stable"
       - run: flutter pub get
+      - run: flutter channel beta
       - run: flutter analyze
       - run: flutter test
