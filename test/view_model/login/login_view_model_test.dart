@@ -21,6 +21,8 @@ void main() {
     store = createStore();
   });
 
+  ///test login
+
   group('login view model test', () {
     testWidgets("handling function onEmailChange test", (tester) async {
       var result;
