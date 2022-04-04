@@ -1,0 +1,20 @@
+stages:
+  - build
+
+flutter_build:
+  stage: build
+  before_script:
+    - echo '--------------------------------------------- (Flutter) Before Script ------------------------------------------------'
+    - flutter packages get
+    - flutter clean
+  script:
+    - echo '--------------------------------------------- (Flutter) Run licenses ------------------------------------------------'
+    - flutter doctor --android-licenses
+    - echo '--------------------------------------------- (Flutter) Run test ------------------------------------------------'
+    - flutter test
+    - echo '--------------------------------------------- (Flutter) Run Script ------------------------------------------------'
+    - flutter build apk
+  tags:
+    - mac-runner
+  only:
+    - Ticket_286
